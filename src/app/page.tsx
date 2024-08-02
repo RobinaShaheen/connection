@@ -107,6 +107,7 @@ export default function Home() {
     fetchData();
   }, []);
 
+
   return (
     <main id="body" className="flex min-h-screen flex-col items-center p-20 overflow-x-hidden overflow-y-auto">
       <h1 className='text-2xl font-light'>Hello Vercel Database</h1>
