@@ -16,6 +16,13 @@
   }
 }
 
+#body{
+  background: rgb(171,127,24);
+background: linear-gradient(90deg, rgba(171,127,24,1) 0%, rgba(116,16,5,1) 35%, rgba(0,212,255,1) 100%);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
