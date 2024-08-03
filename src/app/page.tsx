@@ -162,7 +162,7 @@ export default function Home() {
 
       <div className="mt-8 flex flex-wrap desktop:flex-row laptop:flex-row tablet:flex-row tablet:justify-between mobile:flex-row watch:flex-row">
         {books.map((book, index) => (
-          <div key={index} className="mb-4 p-4 border-2 border-black bg-white rounded-md desktop:w-[400px] desktop:h-auto laptop:w-[400px] laptop:h-auto laptop:ml-20 tablet:w-[300px] tablet:h-auto mobile:w-full mobile:h-auto watch:w-full watch h-auto">
+          <div key={index} className="mb-4 p-4 border-2 border-black bg-white rounded-md desktop:w-[400px] desktop:h-auto laptop:w-[400px] laptop:h-auto laptop:ml-5 tablet:w-[300px] tablet:h-auto mobile:w-full mobile:h-auto watch:w-full watch h-auto">
             <h3 className="text-lx text-black font-bold">{book.id}</h3>
             <h2 className="text-lg  text-black font-bold">{book.name}</h2>
             <p className="text-gray-700">Price: ${book.price}</p>
