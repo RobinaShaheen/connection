@@ -3,7 +3,7 @@ import pool from '../../../../lib/db';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-    const videos = await pool.query(`SELECT * FROM video`);
+    const videos = await pool.query('SELECT * FROM video');
     return NextResponse.json(videos.rows);
 }
 
@@ -15,7 +15,7 @@ export async function POST(request) {
     }
 
     try {
-        const query = 'INSERT INTO video (id, file, description) VALUES (${id}, ${file}, ${description})';
+        const query = 'INSERT INTO video (id, file, description) VALUES ($1, $2, $3) RETURNING *';
         const values = [id, file, description];
         const result = await pool.query(query, values);
         return NextResponse.json(result.rows[0], { status: 200 });
@@ -34,7 +34,7 @@ export async function PUT(request) {
     }
 
     try {
-        const query = 'UPDATE video SET file = ${file}, description = ${description} WHERE id = ${id}';
+        const query = 'UPDATE video SET file = $2, description = $3 WHERE id = $1 RETURNING *';
         const values = [id, file, description];
         const result = await pool.query(query, values);
         return NextResponse.json(result.rows[0], { status: 200 });
@@ -53,7 +53,7 @@ export async function DELETE(request) {
     }
 
     try {
-        const query = 'DELETE FROM video WHERE id = ${id}';
+        const query = 'DELETE FROM video WHERE id = $1';
         const values = [id];
         await pool.query(query, values);
         return NextResponse.json({ message: 'Video deleted successfully' }, { status: 200 });

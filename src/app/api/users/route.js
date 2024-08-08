@@ -7,7 +7,8 @@ export async function GET() {
   try {
     const result = await pool.query('SELECT * FROM books');
     return NextResponse.json(result.rows);
-  } catch (error) {
+  } 
+  catch (error) {
     console.error('Database connection error:', error);
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
