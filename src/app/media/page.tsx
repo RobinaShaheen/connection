@@ -189,7 +189,7 @@ export default function ImageCrud() {
           <div key={index} className="mb-4 p-4 border-2 border-black bg-white rounded-md w-[300px] h-auto">
             <h3 className="text-lx text-black font-bold">{_product.id}</h3>
             {_product.file && (
-              <img width={200} height={200} src={_product.file} alt={_product.description} />
+              <Image width={200} height={200} src={_product.file} alt={_product.description} />
             )}
             <p className="text-gray-700">{_product.description}</p>
             <button
