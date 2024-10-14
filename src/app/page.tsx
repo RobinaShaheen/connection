@@ -20,7 +20,7 @@ export default function Home() {
         </button>
         {showImageCrud && <ImageCrud />}
         
-        <button onClick={() => { setShowVideoCrud(true); setShowImageCrud(false); setShowBookCrud(false)}} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        {/* <button onClick={() => { setShowVideoCrud(true); setShowImageCrud(false); setShowBookCrud(false)}} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
           {showVideoCrud ? 'Hide Video Crud' : 'Show Video Crud'}
         </button>
         {showVideoCrud && <VideoCrud />}
@@ -28,7 +28,7 @@ export default function Home() {
         <button onClick={() => { setShowBookCrud(true); setShowImageCrud(false); setShowVideoCrud(false) }} className="bg-green-500 hover:bg-green-700 text-white font-bold ml-2 py-2 px-4 rounded focus:outline-none focus:shadow-outline">
           {showBookCrud ? 'Hide Book Crud' : 'Show Book Crud'}
         </button>
-        {showBookCrud && <BookCrud />}
+        {showBookCrud && <BookCrud />} */}
       </div>
     </main>
   );

@@ -17,8 +17,8 @@
 }
 
 #body{
-  background: rgb(171,127,24);
-background: linear-gradient(90deg, rgba(171,127,24,1) 0%, rgba(116,16,5,1) 35%, rgba(0,212,255,1) 100%);
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
   overflow-x: hidden;
   overflow-y: auto;
 }
